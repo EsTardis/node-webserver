@@ -65,6 +65,13 @@ app.get('/about',(req,res)=>{
     });
 });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle:'Portfolio Page',
+        //currentYear:new Date().getFullYear()
+
+    });
+});
 
 app.get('/bad',(req,res)=>{
     res.send({
@@ -77,3 +84,5 @@ app.listen(port,()=>{
     console.log(`Server is up on port ${port}`);
 });
 //server local
+
+// 1 git status 2 git add . 3 git status  4  git commit -m "asdasd" 5 git push 6 git push heroku  7 heroku open
